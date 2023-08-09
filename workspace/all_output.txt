@@ -1,20 +1,30 @@
-Assert:
-To test a 'Hello World' console application, the console output is compared with the expected output. 
+If you're looking for the code to create a "Hello World" console app in C#, here it is:
 
-In the case of this simple application, the expected output is the string "Hello World!". 
+```csharp
+using System;
 
-Unfortunately, as a console application runs independently of other applications, traditional automated unit testing methods can't be used. 
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+```
 
-However, one alternative method is to visually inspect the console output when the application is run to make sure "Hello World!" is displayed. 
+And here is how to run and test this app:
 
-Here are the steps to test the 'Hello World' console application:
+1. Save this code in a file named `Program.cs`.
 
-1. Open the command prompt.
+2. Open your terminal or command prompt.
 
-2. Traverse to the location of your compiled C# console application.
+3. Navigate to the directory where you saved your `Program.cs` file.
 
-3. Enter the command `dotnet run`.
+4. Run the command `csc Program.cs` to compile your program. This will create `Program.exe`.
 
-4. You should see "Hello World!" displayed on the console. If this output is observed, the test is considered as passed. 
+5. Run the command `Program.exe`.
 
-This manual method has limitations and is not applicable to large and complex applications wherein you have multiple computations or operations. In such cases, you would use other testing tools and methodologies to test your applications.
+6. You should see "Hello World!" displayed on the console. If you see this output, your program is working as expected.
