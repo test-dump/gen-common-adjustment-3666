@@ -1,48 +1,20 @@
-Specification: Here is a simple step-by-step procedure to create a Hello World console application in C#:
+Assert:
+To test a 'Hello World' console application, the console output is compared with the expected output. 
 
-1. First, ensure that you have .NET Core SDK installed on your machine. If not, download and install it.
+In the case of this simple application, the expected output is the string "Hello World!". 
 
-2. Open your IDE or a simple text editor and create a new file called `Program.cs`.
+Unfortunately, as a console application runs independently of other applications, traditional automated unit testing methods can't be used. 
 
-3. Now you are going to write the code for the Hello World application. 
+However, one alternative method is to visually inspect the console output when the application is run to make sure "Hello World!" is displayed. 
 
-4. Write or paste the following lines of code:
+Here are the steps to test the 'Hello World' console application:
 
-    ```csharp
-        using System;
+1. Open the command prompt.
 
-        namespace HelloWorld
-        {
-            class Program
-            {
-                static void Main(string[] args)
-                {
-                    Console.WriteLine("Hello World!");
-                }
-            }
-        }
-    ```
+2. Traverse to the location of your compiled C# console application.
 
-5. The code can be explained as follows: 
+3. Enter the command `dotnet run`.
 
-    - `using System;` is a directive to C# compiler to use System namespace.
-    
-    - `namespace HelloWorld` HelloWorld is the namespace that contains the class Program.
-    
-    - `class Program` is a basic unit of a program, and it is a blueprint of an object.
-    
-    - `static void Main(string[] args)` The Main method is the entry point of a C# console application. When the program started, the Main method is the first method that gets invoked.
-    
-    - `Console.WriteLine("Hello World!");` The WriteLine() method outputs the Hello World! text on the screen.
+4. You should see "Hello World!" displayed on the console. If this output is observed, the test is considered as passed. 
 
-6. After you finish writing the code, save the file.
-
-7. Open a terminal window and navigate to the directory where you have your `Program.cs` file. 
-
-8. Type `csc Program.cs` and hit enter. This command will create `Program.exe` file. 
-
-9. Type `Program` and hit enter to run the program.
-
-10. The message "Hello World!" should display on the console.
-   
-By following these steps, you should be able to create a simple Hello World console application in C#. It's a great way to start learning and understanding the basics of C#.
+This manual method has limitations and is not applicable to large and complex applications wherein you have multiple computations or operations. In such cases, you would use other testing tools and methodologies to test your applications.
